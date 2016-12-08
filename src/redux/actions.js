@@ -4,3 +4,14 @@ export function changeText(payload) {
     payload
   }
 }
+
+export function thunkAction(payload) {
+  return (dispatch) => {
+    dispatch(changeText(payload));
+
+    return {
+      type: 'THUNK_ACTION',
+      payload
+    }
+  }
+}
